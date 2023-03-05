@@ -306,6 +306,7 @@
       <p class="title mb-15">Todo List</p>
         <div class="todo">
           <form action="/add" method="POST" class="flex between mb-30">
+            @csrf
             <input type="hidden" name="_token">          
             <input type="text" class="input-add" name="content">
             <input class="button-add" type="submit" value="追加">
@@ -339,7 +340,7 @@
                 <td>
                   2023-03-03 02:14:54
                 </td>
-                  <form action="http://54.65.181.123/todo-introduction/todo/update?id=342" method="post"></form>
+                  <form action="http://54.65.181.123/todo-introduction/todo/update?id=342" method="post">@csrf</form>
                   <input type="hidden" name="_token" value="5x1TAv3R5WxJXIJ2vwSY40Pjvu2emaxwkSnY7C3c">              
                 <td>
                   <input type="text" class="input-update" value="a" name="content">
@@ -349,6 +350,7 @@
                 </td>
                 <td>
                   <form action="http://54.65.181.123/todo-introduction/todo/delete?id=342" method="post">
+                    @csrf
                     <input type="hidden" name="_token" value="5x1TAv3R5WxJXIJ2vwSY40Pjvu2emaxwkSnY7C3c">                
                     <button class="button-delete">削除</button>
                   </form>
