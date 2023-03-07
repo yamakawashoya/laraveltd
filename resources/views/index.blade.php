@@ -306,8 +306,7 @@
       <p class="title mb-15">Todo List</p>
         <div class="todo">
           <form action="/add" method="POST" class="flex between mb-30">
-            @csrf
-            <input type="hidden" name="_token">          
+            @csrf      
             <input type="text" class="input-add" name="content">
             <input class="button-add" type="submit" value="追加">
           </form>
