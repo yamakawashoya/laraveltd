@@ -330,7 +330,7 @@
                 </td>
                 <td>
                   <form action="/del" method="POST">
-                    <input type="hidden" name="_token">                
+                    @csrf              
                     <button class="button-delete">削除</button>
                   </form>
                 </td>
@@ -339,8 +339,7 @@
                 <td>
                   2023-03-03 02:14:54
                 </td>
-                  <form action="http://54.65.181.123/todo-introduction/todo/update?id=342" method="post">@csrf</form>
-                  <input type="hidden" name="_token" value="5x1TAv3R5WxJXIJ2vwSY40Pjvu2emaxwkSnY7C3c">              
+                  <form action="/up" method="POST">@csrf</form>           
                 <td>
                   <input type="text" class="input-update" value="a" name="content">
                 </td>
@@ -348,9 +347,8 @@
                   <button class="button-update">更新</button>
                 </td>
                 <td>
-                  <form action="http://54.65.181.123/todo-introduction/todo/delete?id=342" method="post">
-                    @csrf
-                    <input type="hidden" name="_token" value="5x1TAv3R5WxJXIJ2vwSY40Pjvu2emaxwkSnY7C3c">                
+                  <form action="/del" method="post">
+                    @csrf              
                     <button class="button-delete">削除</button>
                   </form>
                 </td>
@@ -359,8 +357,7 @@
                 <td>
                   2023-03-03 02:14:58
                 </td>
-                  <form action="http://54.65.181.123/todo-introduction/todo/update?id=343" method="post"></form>
-                  <input type="hidden" name="_token" value="5x1TAv3R5WxJXIJ2vwSY40Pjvu2emaxwkSnY7C3c">              
+                  <form action="/up" method="POST"></form>
                 <td>
                   <input type="text" class="input-update" value="あああああ" name="content">
                 </td>
@@ -368,8 +365,7 @@
                   <button class="button-update">更新</button>
                 </td>
                 <td>
-                  <form action="http://54.65.181.123/todo-introduction/todo/delete?id=343" method="post">
-                    <input type="hidden" name="_token" value="5x1TAv3R5WxJXIJ2vwSY40Pjvu2emaxwkSnY7C3c">                
+                  <form action="/del" method="POST">
                     <button class="button-delete">削除</button>
                   </form>
                 </td>
