@@ -305,15 +305,21 @@
     <div class="card">
       <p class="title mb-15">Todo List</p>
         <div class="todo">
-          <form action="/add" method="POST" class="flex between mb-30">
-            @csrf      
+          
+          
+            @foreach ($todos as $todo)
+            <form action="/add" method="POST" class="flex between mb-30">
+              @csrf
+            <table>
+              <tr>
+                <td>{{$todo->id}}</td>
+                <td>{{$todo->content</td>
+              </tr>
+            </table>
+            @endforeach
             <input type="text" class="input-add" name="content">
             <input class="button-add" type="submit" value="追加">
-            @foreach ($todos as todo)
-            <tr>
-              <td>{{$todo->id}}</td>
-              <td>{{$todo->content</td>
-            </tr>
+            
           </form>
           <table>
             <tbody>
