@@ -309,15 +309,16 @@
             @csrf      
             <input type="text" class="input-add" name="content">
             <input class="button-add" type="submit" value="追加">
+          </form>
             <table>
               @foreach ($todos as $todo)
               <tr>
                 <td>{{$todo->id}}</td>
-                <td>{{$todo->content</td>
+                <td>{{$todo->content}}</td>
               </tr>
               @endforeach
             </table>
-          </form>
+
           <table>
             <tbody>
               <tr>
