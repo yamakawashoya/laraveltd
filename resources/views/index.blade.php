@@ -327,6 +327,7 @@
                 </td>
                 <td>
                   <input type="text" class="input-update" name="content">
+                  {{$todo->content}}
                 </td>
                 <td>
                   <button class="button-update">更新</button>
