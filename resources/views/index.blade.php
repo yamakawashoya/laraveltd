@@ -312,8 +312,8 @@
             <table>
               @foreach ($todos as $todo)
               <tr>
-                <td>{{$todo->$id}}</td>
-                <td>{{$todo->$content</td>
+                <td>{{$todo->id}}</td>
+                <td>{{$todo->content</td>
               </tr>
               @endforeach
             </table>
