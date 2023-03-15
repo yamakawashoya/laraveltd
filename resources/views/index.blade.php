@@ -310,14 +310,7 @@
             <input type="text" class="input-add" name="content">
             <input class="button-add" type="submit" value="追加">
           </form>
-            <table>
-              @foreach ($todos as $todo)
-              <tr>
-                <td>{{$todo->id}}</td>
-                <td>{{$todo->content}}</td>
-              </tr>
-              @endforeach
-            </table>
+            
 
           <table>
             <tbody>
@@ -327,9 +320,10 @@
                 <th>更新</th>
                 <th>削除</th>
               </tr>
+              @foreach ($todos as $todo)
               <tr>
                 <td>
-                  2023-03-03 01:08:52
+                  {{$todo->created_at}}
                 </td>
                 <td>
                   <input type="text" class="input-update" name="content">
@@ -344,41 +338,8 @@
                   </form>
                 </td>
               </tr>
-              <tr>
-                <td>
-                  2023-03-03 02:14:54
-                </td>
-                  <form action="/up" method="POST">@csrf</form>           
-                <td>
-                  <input type="text" class="input-update" value="a" name="content">
-                </td>
-                <td>
-                  <button class="button-update">更新</button>
-                </td>
-                <td>
-                  <form action="/del" method="post">
-                    @csrf              
-                    <button class="button-delete">削除</button>
-                  </form>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  2023-03-03 02:14:58
-                </td>
-                  <form action="/up" method="POST"></form>
-                <td>
-                  <input type="text" class="input-update" value="あああああ" name="content">
-                </td>
-                <td>
-                  <button class="button-update">更新</button>
-                </td>
-                <td>
-                  <form action="/del" method="POST">
-                    <button class="button-delete">削除</button>
-                  </form>
-                </td>
-              </tr>
+              
+              @endforeach
             </tbody>
           </table>
         </div>
