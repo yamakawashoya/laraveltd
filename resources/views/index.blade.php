@@ -305,6 +305,9 @@
     <div class="card">
       <p class="title mb-15">Todo List</p>
         <div class="todo">
+          @if (count($errors) > 0)
+          <p>タスクを入力してください。</p>
+          @endif
           <form action="/add" method="POST" class="flex between mb-30">
             @csrf      
             <input type="text" class="input-add" name="content">
@@ -325,15 +328,20 @@
                 <td>
                   {{$todo->created_at}}
                 </td>
+                <form action="/up" method="POST">
+                  @csrf
                 <td>
                   <input type="text" class="input-update" name="content" value="{{$todo->content}}">
                 </td>
                 <td>
-                  <button class="button-update">更新</button>
+                    <input type="hidden" value="{{$todo->id}}" name="id">
+                    <button class="button-update">更新</button>
+                  </form>
                 </td>
                 <td>
                   <form action="/del" method="POST">
-                    @csrf              
+                    @csrf 
+                    <input type="hidden" value="{{$todo->id}}" name="id">
                     <button class="button-delete">削除</button>
                   </form>
                 </td>
