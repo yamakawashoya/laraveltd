@@ -307,7 +307,8 @@
         <div class="todo">
           @if (count($errors) > 0)
           <p>タスクを入力してください。</p>
-          @if (count($errors) > 20)
+          @endif
+          @if (count($errors) < 20)
           <p>タスクは20文字以内で入力してください。</p>
           @endif
           <form action="/add" method="POST" class="flex between mb-30">
