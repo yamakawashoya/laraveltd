@@ -27,4 +27,12 @@ class TodoRequest extends FormRequest
             'content' => 'required'
         ];
     }
+
+    public function messages()
+    {
+    return [
+        'content.required' => '・タスクを入力してください',
+        'content.required' => '・20字以内で入力してください',
+        ];
+    }
 }
