@@ -306,18 +306,20 @@
       <p class="title mb-15">Todo List</p>
         <div class="todo">
           @if (count($errors) > 0)
-          <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{$message}}</li>
-            @endforeach
-          </ul>
+            <ul>
+              @foreach ($errors->all() as $error)
+              <li>{{$message}}</li>
+              @endforeach
+            </ul>
           @endif
+
           @if (count($errors) < 20)
-          <ul>
+            <ul>
             @foreach ($errors->all() as $error)
-            <li>{{$message}}</li>
-          </ul>
+              <li>{{$message}}</li>
+            </ul>
           @endif
+          
           <form action="/add" method="POST" class="flex between mb-30">
             @csrf      
             <input type="text" class="input-add" name="content">
