@@ -308,7 +308,7 @@
           @if (count($errors) > 0)
             <ul>
               @foreach ($errors->all() as $error)
-              <li>{{$messages}}</li>
+              <li>{{$error}}</li>
               @endforeach
             </ul>
           @endif
@@ -316,7 +316,7 @@
           @if (count($errors) < 20)
             <ul>
             @foreach ($errors->all() as $error)
-              <li>{{$messages}}</li>
+              <li>{{$error}}</li>
               @endforeach
             </ul>
           @endif
