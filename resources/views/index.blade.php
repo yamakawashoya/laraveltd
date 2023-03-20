@@ -317,9 +317,10 @@
             <ul>
             @foreach ($errors->all() as $error)
               <li>{{$message}}</li>
+              @endforeach
             </ul>
           @endif
-          
+
           <form action="/add" method="POST" class="flex between mb-30">
             @csrf      
             <input type="text" class="input-add" name="content">
