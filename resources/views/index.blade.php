@@ -313,13 +313,13 @@
             </ul>
           @endif
 
-          @if (count($errors) < 20)
+          <!--@if (count($errors) < 20)
             <ul>
             @foreach ($errors->all() as $error)
               <li>{{$error}}</li>
               @endforeach
             </ul>
-          @endif
+          @endif-->
 
           <form action="/add" method="POST" class="flex between mb-30">
             @csrf      
